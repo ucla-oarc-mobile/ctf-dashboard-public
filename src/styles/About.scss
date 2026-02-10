@@ -1,0 +1,40 @@
+@import "./_variables.scss";
+
+.About {
+  text-align: center;
+
+  h1 {
+    margin: 10px 0 30px 0;
+    font-size: 56px;
+  }
+
+  .screenshots {
+    margin-top: 25px;
+  }
+
+  .gradient {
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient($primary-color, $secondary-color);
+    font-size: 24px;
+    line-height: 28px;
+    color: white;
+  }
+
+  .description {
+    width: 950px;
+    margin: 40px auto;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: left;
+  }
+
+  .contact {
+    font-size: 28px;
+  }
+
+  .oarc {
+    text-align: left;
+  }
+}

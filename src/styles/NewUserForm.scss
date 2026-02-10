@@ -1,0 +1,58 @@
+@import "./_variables.scss";
+
+.NewUserForm {
+  .pt-label {
+    font-weight: bold;
+
+    .styled-select {
+      margin-top: 5px;
+      font-weight: normal;
+    }
+  }
+
+  .pt-input-group, .pt-form-group {
+    .pt-input {
+      width: 100%;
+      border: 1px solid $dark-gray;
+      border-radius: 0;
+    }
+  }
+
+  .required {
+    color: $red;
+  }
+
+  button + small {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+
+.pt-dialog-container {
+  .pt-dialog {
+    background-color: white;
+
+    .pt-dialog-header {
+      position: relative;
+      text-align: center;
+
+      h1, h2, h3, h4, h5, h6 {
+        color: inherit;
+      }
+
+      .pt-dialog-close-button {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        padding: 0;
+        background-color: white;
+        border: 1px solid $dark-gray;
+        border-radius: 15px;
+      }
+    }
+
+    form {
+      padding: 0 100px;
+    }
+  }
+}

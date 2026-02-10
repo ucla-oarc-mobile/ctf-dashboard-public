@@ -1,0 +1,54 @@
+@import "./_variables.scss";
+
+.StepChart {
+  position: relative;
+  text-align: center;
+
+  svg.overflow {
+    overflow: visible;
+  }
+
+  .vx-axis-bottom text {
+    font-size: 1rem;
+  }
+
+  .steps-bar {
+    .vx-bar {
+      fill: $primary-color;
+    }
+
+    text {
+      text-anchor: middle;
+      fill: white;
+    }
+  }
+
+  .steps-goal-box {
+    cursor: pointer;
+  }
+
+  .steps-goal-explanation {
+    visibility: hidden;
+  }
+
+  .steps-goal-box:hover + .steps-goal-explanation,
+  .steps-goal-box:focus + .steps-goal-explanation {
+    visibility: visible;
+  }
+
+  .pt-button {
+    &.button-left, &.button-right {
+      position: absolute;
+      bottom: 0;
+      padding: 0 0 0 5px;
+    }
+
+    &.button-left {
+      left: 1rem;
+    }
+
+    &.button-right {
+      right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "./_variables.scss";
+
+main {
+  padding: $default-padding;
+
+  &.logged-in {
+    background: white;
+  }
+}

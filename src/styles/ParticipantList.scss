@@ -1,0 +1,50 @@
+@import "./_variables.scss";
+
+div.pt-input-group {
+  margin: 0;
+}
+
+.on-track {
+  background-color: $green;
+
+  &, span {
+    color: white;
+  }
+}
+
+.behind {
+  background-color: $orange;
+}
+
+.stalled {
+  background-color: $red;
+
+  &, span {
+    color: white;
+  }
+}
+
+.legend {
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+  }
+
+  div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  .key {
+    width: 40px;
+    height: 40px;
+  }
+}

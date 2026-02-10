@@ -1,0 +1,52 @@
+@import "./_variables.scss";
+
+table.pt-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    th, td {
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid $light-gray;
+      box-shadow: none !important;
+    }
+
+    th {
+      position: relative;
+      height: 2rem;
+      padding-left: 0.5rem;
+      padding-right: 1.5rem;
+      text-align: left;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $light-gray;
+      }
+
+      &.active {
+        background-color: $primary-color;
+        color: white;
+      }
+
+      &.non-sortable {
+        cursor: default;
+
+        &:hover {
+          background-color: white;
+        }
+      }
+
+      .pt-icon-standard {
+        position: absolute;
+        right: 0.5rem;
+        top: calc(50% - 8px);
+      }
+    }
+
+    td {
+      height: 4rem;
+    }
+  }
+}

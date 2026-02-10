@@ -1,0 +1,45 @@
+@import "./_variables.scss";
+
+.WeightStatus {
+  text-align: center;
+
+  .container-fluid {
+    width: 50%;
+
+    .row:first-child {
+      border-bottom: 1px solid $light-gray;
+
+      .col-xs-6 {
+        padding: 10px 0 0 0;
+      }
+    }
+
+    .row {
+      .col-xs-6:first-child {
+        border-right: 1px solid $light-gray;
+      }
+    }
+
+    .row:last-child {
+      .col-xs-6 {
+        padding: 0;
+      }
+    }
+  }
+
+  .loss, .gain {
+    padding: 5px;
+    color: white;
+  }
+
+  .loss {
+    float: right;
+    text-align: right;
+    background-color: $green;
+  }
+
+  .gain {
+    text-align: left;
+    background-color: $red;
+  }
+}

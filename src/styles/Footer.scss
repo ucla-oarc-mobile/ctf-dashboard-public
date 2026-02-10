@@ -1,0 +1,17 @@
+@import "./_variables.scss";
+
+footer {
+  padding-bottom: 1rem;
+  padding-left: $pt-grid-size * 1.5;
+  color: white;
+
+  &:not(.logged-in) a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  &.logged-in {
+    background: white;
+    color: black;
+  }
+}

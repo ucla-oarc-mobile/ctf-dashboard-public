@@ -1,0 +1,165 @@
+@import "./_variables.scss";
+
+.Survey {
+  .pt-progress-bar {
+    height: 1rem;
+    border: 1px solid $light-gray;
+    border-radius: 0;
+    background-color: white;
+
+    .pt-progress-meter {
+      border-radius: 0;
+      background: linear-gradient(
+        -45deg,
+        $secondary-color 25%,
+        transparent 25%,
+        transparent 50%,
+        $secondary-color 50%,
+        $secondary-color 75%,
+        transparent 75%
+      );
+      background-color: $light-gray;
+      background-size: 30px 30px;
+    }
+  }
+
+  .prompt-list {
+    padding-left: 0;
+
+    > li {
+      list-style-type: none;
+    }
+  }
+
+  .controls {
+    margin-top: 3rem;
+    text-align: center;
+
+    .pt-button:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    .pt-button {
+      border-radius: 0;
+    }
+  }
+
+  .complete {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .ModuleProgress.panel {
+    border: none;
+
+    .panel-section {
+      border: none;
+    }
+  }
+
+  /* TODO: non-hardcoded */
+  .scrollable {
+    max-height: 600px;
+    overflow-y: scroll;
+  }
+
+  .error {
+    color: $red;
+  }
+
+  .pt-button .button-icon-right {
+    margin-right: 0;
+    margin-left: 5px;
+  }
+
+  h2.text-center {
+    margin-top: 2rem;
+  }
+
+  .topic-selection {
+    div[class*="col-xs-"] {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .pt-button.topic {
+      position: relative;
+      height: 130px;
+      margin: 4rem 0;
+      padding-top: 90px;
+      background-color: white;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position: center 30%;
+      border: 2px solid $primary-color;
+      color: $primary-color;
+
+      &.topic-maintenance {
+        background-image: url("../images/maintenance.svg");
+      }
+
+      &.topic-motivation {
+        background-image: url("../images/motivation.svg");
+      }
+
+      &.topic-physical {
+        background-image: url("../images/physical.svg");
+      }
+
+      &.topic-nutrition {
+        background-image: url("../images/nutrition.svg");
+      }
+
+      &:hover {
+        background-color: $primary-color;
+        color: white;
+      }
+
+      &.complete {
+        background-color: $lightest-gray;
+        color: $primary-color;
+        border: 2px solid $dark-gray;
+      }
+
+      .badge {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 40px;
+      }
+    }
+
+    .button-inverse {
+      height: 45px;
+      border: 1px solid $primary-color;
+      font-size: smaller;
+      text-transform: unset;
+    }
+
+    .button-primary {
+      position: relative;
+      height: 45px;
+      padding-right: 45px;
+      font-size: smaller;
+      line-height: 1rem;
+      text-align: left;
+      text-transform: unset;
+
+      &:hover {
+        border: 1px solid $primary-color;
+      }
+
+      img {
+        float: left;
+        margin-top: 3px;
+      }
+
+      .button-icon-forward {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+      }
+    }
+  }
+}

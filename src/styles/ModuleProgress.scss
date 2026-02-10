@@ -1,0 +1,48 @@
+@import "./_variables.scss";
+
+.ModuleProgress {
+  .panel-heading h3 {
+    margin-bottom: 0;
+  }
+
+  &.panel {
+    .panel-heading {
+      padding: 0.5rem;
+    }
+
+    .panel-section {
+      padding: 0.5rem 2rem 1rem 2rem;
+    }
+  }
+
+  .status-bar {
+    padding: 0.5rem;
+  }
+
+  .status-description {
+    margin-top: 1.2rem;
+    color: $green;
+  }
+
+  .meter {
+    height: 3rem;
+    margin-top: 0.5rem;
+  }
+
+  .goal-description {
+    margin-top: 0.5rem;
+  }
+
+  .goal-tracker {
+    border: 1px solid $light-gray;
+  }
+
+  .goal-tracker-heading {
+    background-color: $lightest-gray;
+    font-size: smaller;
+  }
+
+  .goal-tracker-body {
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,269 @@
+@import "~normalize.css/normalize.css";
+@import "~@blueprintjs/core/dist/blueprint.css";
+@import "~@blueprintjs/datetime/dist/blueprint-datetime.css";
+
+@import "./styles/_variables.scss";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto;
+}
+
+.App {
+  background: linear-gradient($primary-color, $secondary-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  min-height: 100vh;
+
+  > main {
+    flex: 1 1 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  font-weight: 300;
+}
+
+.hidden {
+  display: none;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.note {
+  color: $green;
+}
+
+.pt-button {
+  &.button-primary, &.button-inverse, &.button-gray {
+    line-height: 2.5rem;
+    text-transform: uppercase;
+
+    img {
+      height: 1.5rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+  }
+
+  &.button-primary {
+    background: $primary-color;
+    color: white;
+
+    &:hover {
+      background: white;
+      color: $primary-color;
+    }
+  }
+
+  &.button-inverse {
+    background: white;
+    color: $primary-color;
+
+    &:hover {
+      background: $primary-color;
+      color: white;
+    }
+  }
+
+  &.button-gray {
+    background: $dark-gray;
+    color: white;
+
+    &:hover {
+      background: white;
+      color: $dark-gray;
+    }
+  }
+}
+
+.styled-select {
+  width: 100%;
+  margin: auto;
+  border: 1px solid $dark-gray;
+  border-radius: 0 5px 5px 0;
+  background: url("images/select.svg") no-repeat right center;
+
+  &:hover {
+    background-image: url("images/selectInverse.svg")
+  }
+
+  &.disabled {
+    background-image: url("images/selectGray.svg");
+  }
+
+  select {
+    width: 100%;
+    padding: 5px 8px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+
+    &:focus::-ms-value {
+      color: black;
+      background: transparent;
+    }
+  }
+}
+
+.panel {
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+
+  .panel-heading {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+  }
+
+  .panel-section {
+    padding: 1rem;
+    border-top: 1px solid $light-gray;
+  }
+}
+
+.pt-input-group {
+  .pt-icon-search {
+    margin: 0;
+    padding: 0 15px;
+    border-radius: 0 30px 30px 0;
+    background-color: $primary-color;
+    color: white;
+  }
+
+  &:hover .pt-icon-search {
+    margin: 1px 1px 1px 0;
+    line-height: 28px;
+    padding-right: 14px;
+    background-color: white;
+    color: $primary-color;
+  }
+}
+
+span[class*="button-icon-"] {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.button-icon-back {
+  background-image: url("images/back.svg");
+
+  .pt-button:hover & {
+    background-image: url("images/backInverse.svg");
+  }
+}
+
+.button-icon-forward {
+  background-image: url("images/forward.svg");
+
+  .pt-button:hover & {
+    background-image: url("images/forwardInverse.svg");
+  }
+}
+
+.button-icon-add {
+  background-image: url("images/add.svg");
+
+  .pt-button:hover & {
+    background-image: url("images/addInverse.svg");
+  }
+}
+
+.button-icon-edit {
+  background-image: url("images/edit.svg");
+
+  .pt-button:hover & {
+    background-image: url("images/editInverse.svg");
+  }
+}
+
+.button-icon-left {
+  background-image: url("images/arrowLeft.svg");
+
+  .pt-button:hover & {
+    background-image: url("images/arrowLeftInverse.svg");
+  }
+}
+
+.button-icon-right {
+  background-image: url("images/arrowRight.svg");
+
+  .pt-button:hover & {
+    background-image: url("images/arrowRightInverse.svg");
+  }
+}
+
+.button-icon-survey {
+  background-image: url("images/survey.svg");
+}
+
+.button-icon-leaderboard {
+  background-image: url("images/leaderboard.svg");
+
+  .pt-button:hover & {
+    background-image: url("images/leaderboardInverse.svg");
+  }
+}
+
+rect.last-day {
+  fill: $yellow;
+  stroke: $red;
+  stroke-width: 1px;
+}
+
+.target-line {
+  line.red {
+    stroke: $red;
+    stroke-width: 2px;
+    stroke-dasharray: 10;
+  }
+
+  text {
+    font-size: 12px;
+  }
+
+  text.red {
+    fill: $red;
+  }
+
+  text.white {
+    fill: white;
+  }
+
+  polygon {
+    fill: $red;
+  }
+}

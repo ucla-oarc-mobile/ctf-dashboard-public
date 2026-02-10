@@ -1,0 +1,59 @@
+@import "./_variables.scss";
+
+.skip-link {
+  position: absolute;
+  left: 50%;
+  z-index: 20;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+  padding: 4px;
+  background-color: $primary-color;
+  color: white;
+
+  &:focus {
+    transform: translateY(0%);
+  }
+}
+
+.pt-navbar {
+  background: linear-gradient($primary-color, $secondary-color);
+
+  .logo {
+    height: 2.5rem;
+    margin-top: 0.2rem;
+
+    &:hover {
+      background-color: rgba(167, 182, 194, 0.3);
+    }
+  }
+
+  .pt-button > span {
+    color: white;
+  }
+
+  .downArrow {
+    height: 0.7rem;
+    margin-left: 0.5rem;
+  }
+
+  .button-inverse {
+    width: 150px;
+  }
+}
+
+.pt-popover {
+  .pt-menu {
+    padding: 0;
+
+    .pt-menu-item {
+      padding-left: 20px;
+      padding-right: 20px;
+      color: $primary-color;
+    }
+
+    .pt-menu-item:hover, .pt-submenu > .pt-popover-open > .pt-menu-item {
+      color: white;
+      background-color: $primary-color;
+    }
+  }
+}

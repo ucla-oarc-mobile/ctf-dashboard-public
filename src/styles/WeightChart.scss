@@ -1,0 +1,69 @@
+@import "./_variables.scss";
+
+.WeightChart {
+  position: relative;
+  text-align: center;
+
+  svg.overflow {
+    overflow: visible;
+  }
+
+  .vx-axis-bottom text {
+    font-size: 1rem;
+  }
+
+  .vx-linepath {
+    stroke: $primary-color;
+  }
+
+  .vx-linepath-glyphs {
+    .vx-glyph-dot {
+      stroke: $primary-color;
+      fill: white;
+    }
+
+    text {
+      text-anchor: middle;
+      fill: $primary-color;
+    }
+
+    .cx-group.last-day {
+      .vx-glyph-dot {
+        fill: $primary-color;
+      }
+
+      > text {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .pt-button {
+    &.button-left, &.button-right {
+      position: absolute;
+      bottom: 0;
+      padding: 0 0 0 5px;
+    }
+
+    &.button-left {
+      left: 1rem;
+    }
+
+    &.button-right {
+      right: 1rem;
+    }
+  }
+
+  .current-weight {
+    line {
+      fill: none;
+      stroke: $red;
+      stroke-linecap: round;
+      stroke-width: 3px;
+    }
+
+    path, text {
+      fill: $red;
+    }
+  }
+}

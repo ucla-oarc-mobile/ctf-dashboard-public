@@ -1,0 +1,28 @@
+@import "./_variables.scss";
+
+.box {
+  position: relative;
+  margin-top: 1rem;
+  padding: 0 7rem 0 1rem;
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+
+  dt, dd {
+    font-weight: bold;
+  }
+
+  dd {
+    margin-top: 0.5rem;
+    color: $green;
+  }
+
+  dd + dt {
+    margin-top: 1rem;
+  }
+
+  .pt-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
